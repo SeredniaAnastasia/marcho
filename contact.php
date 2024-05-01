@@ -14,6 +14,7 @@
   <meta name="msapplication-TileColor" content="#00a300">
   <meta name="theme-color" content="#385854">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
@@ -94,62 +95,96 @@
               </button>
             </li>
           </ul>
+
         </div>
 
       </div>
     </header>
     <main class="main">
-
       <section class="top">
         <div class="top-container" style="background-image: url('images/top-bg.webp');">
-          <h1 class="hidden">register</h1>
-          <h2 class="top__subtitle title">REGISTER</h2>
-          <div class="bleadcrumbs">
-            <ul class="bleadcrumbs__list">
-              <li class="bleadcrumbs__item">
-                <a class="bleadcrumbs__link" href="index.html">
-                  Home
-                </a>
-              </li>
-              <li class="bleadcrumbs__item">
-                <a class="bleadcrumbs__link" href="register.html">
-                  REGISTER
-                </a>
-              </li>
-            </ul>
+          <div class="container">
+            <h1 class="top__title title">CONTACT US</h1>
+            <div class="bleadcrumbs">
+              <ul class="bleadcrumbs__list">
+                <li class="bleadcrumbs__item">
+                  <a class="bleadcrumbs__link" href="index.html">
+                    Home
+                  </a>
+                </li>
+                <li class="bleadcrumbs__item">
+                  <a class="bleadcrumbs__link" href="contact.html">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
-      <section class="sing-in-up">
+      <div id="map" class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193596.1336857452!2d-74.2918176426542!3d40.69732811083898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sua!4v1713792316186!5m2!1sru!2sua"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <section class="contact">
         <div class="container">
-          <h2 class="hidden">sing-in-up</h2>
-          <div class="sing-in-up__links">
-            <a class="sing-in-up__link sing-in-up__link--active" href="register.html">REGISTER</a>
-            <a class="sing-in-up__link" href="login.html">LOGIN</a>
+          <div class="contact__inner">
+            <div class="contact__info">
+              <h2 class="contact__info-title">
+                Feel Free Don’t
+                Hesitate To
+                Contact With Us
+              </h2>
+              <p class="contact__info-text">
+                Lorem ipsum dolor sit amet, consectetur adingn elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Quis ipsum suspendisse ultrices gravida. Risus commodo
+                maecnaacnrao cumsan lacus vel facilisis.
+              </p>
+              <ul class="contact__info-list">
+                <li class="contact__info-item">
+                  <a class="contact__info-phone" href="tel:+01234567896">+0-123-456-7896</a>
+                  <a class="contact__info-phone" href="tel:+01234567896">+0-123-456-7896</a>
+                </li>
+                <li class="contact__info-item contact__info-item--location">
+                  Ranlon Market 789 Road, <br>
+                  Market Street, Newyork
+                </li>
+                <li class="contact__info-item contact__info-item--email">
+                  <div>yourmailaddress@gmail.com</div>
+                  <div>companymail@gmail.com</div>
+                </li>
+              </ul>
+            </div>
+            <form class="contact__form send-form-mail">
+              <!-- Hidden Required Fields -->
+              <input type="hidden" name="project_name" value="marcho">
+              <input type="hidden" name="admin_email" value="seredniimykola@gmail.com">
+              <input type="hidden" name="form_subject" value="Marcho">
+              <p class="contact__form-title">Contact Form</p>
+              <div class="contact__form-box">
+                <input class="contact__form-input" value="Mykola" name="yourName" type="text" placeholder="Your Name"
+                  required>
+                <input class="contact__form-input validate-email" name="email" type="text"
+                  placeholder="Your E-mail Address" required>
+              </div>
+              <input class="contact__form-input" value="new message test" name="subject" type="text"
+                placeholder="Subject" required>
+              <textarea class="contact__form-textarea" name="message" cols="30" rows="10" placeholder="Message here"
+                required></textarea>
+              <input type="text" name=":" style="display: none" value="">
+              <img class="img-captcha" src="captcha.php" alt="captcha">
+              <input class="contact__form-input input-captcha" type="text" name="kapcha">
+              <button class="contact__form-btn button" type="submit">send message</button>
+            </form>
+
           </div>
-          <form class="sing-in-up__form" action="#">
-            <label class="sing-in-up__label">
-              Username or email address*
-              <input class="sing-in-up__input" type="text" required>
-            </label>
-            <label class="sing-in-up__label">
-              Password*
-              <input class="sing-in-up__input" type="password" required>
-            </label>
-            <p class="sing-in-up__text">A password will be sent to your email address.</p>
-            <p class="sing-in-up__text">
-              Your personal data will be used to support your experience
-              throughout this website, to manage access to your account,
-              and for other purposes described in our privacy policy.
-            </p>
-            <label class="sing-in-up__label">
-              <input type="checkbox">
-              Agree with Terms & Conditions
-            </label>
-            <button class="sing-in-up__btn" type="submit">REGISTER</button>
-          </form>
         </div>
       </section>
+
     </main>
     <footer class="footer">
       <div class="container">
@@ -263,10 +298,11 @@
             </p>
             <form class="footer-top__form send-form-newsletter" action="#">
               <input type="hidden" name="project_name" value="marcho">
-              <input type="hidden" name="admin_email" value="anastasiaseredna@gmail.com">
+              <input type="hidden" name="admin_email" value="seredniimykola@gmail.com">
               <input type="hidden" name="form_subject" value="Marcho">
-              <input class="footer-top__form-input" value="" name="email" type="email" placeholder="Your email address"
-                required>
+              <input class="footer-top__form-input validate-email" name="email" type="email"
+                placeholder="Your email address" required>
+              <input type="text" name=":" style="display: none" value="">
               <button class="footer-top__form-btn button" type="submit">Subscribe</button>
             </form>
           </div>
